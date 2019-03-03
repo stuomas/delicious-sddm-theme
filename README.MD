@@ -40,7 +40,7 @@ iconglow=enable //glow around selected session and text
 glowcolor=#FFFF0000 //color of glow
 ```
 #### Adding an icon for missing session
-Sessions are looked up from their .desktop files in `/usr/share/xsessions`, and the session filename here should be listed in the `sessions=` entry of `theme.conf` and match the icon filename. For example, if you have a session called `xfce.desktop` in `/usr/share/xsessions`, you need to add `xfce` to the `sessions=`list, and an icon called `xfce.svg` in `/icons/delicate/`. The displayed session name comes from the `Name=` entry in the .desktop file.
+Sessions are looked up from their .desktop files in `/usr/share/xsessions` and `/usr/share/wayland-sessions`, and the session name should be listed in the `sessions=` entry of `theme.conf` and match the icon filename. For example, if you have a session with `Name=xfce` in `/usr/share/xsessions/xfce.desktop`, you need to add `xfce` to the `sessions=`list, and an icon called `xfce.svg` in `/icons/delicate/`. The displayed session name comes from the `Name=` entry in the .desktop file.
 
 #### Hide a session from the list
 If you want that a specific session won't appear in the list, for example some debug sessions, you can add in the corresponding .desktop file the entry `NoDisplay=true` instead of deleting the whole file.

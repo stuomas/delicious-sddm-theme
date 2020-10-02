@@ -77,17 +77,13 @@ Item {
         }
         Text {
             id: passPrompt
-            anchors.fill: parent
-            //MULTIPLE USERS
-            //text: (userName == "") ? "[Select user]" : "[Password for %1]".arg(userName)
-            //SINGLE USER
-            text: "[Enter Password]"
+            text: (userName == "") ? "[Select user]" : "[Password for %1]".arg(userName)
             color: "#55FFFFFF"
             clip: true
             font.pointSize: 12 * Logic.cfgFontScale
             font.family: Logic.cfgFontFamily
-            //ADJUST TO WORK WITH YOUR SCREEN RESOLUTION
-            anchors.leftMargin: ico.width * 1.5
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.horizontalCenter: parent.horizontalCenter
             opacity: (passwdInput.focus && passwdInput.text === "")
             Behavior on opacity {
                 NumberAnimation { duration: 200 }

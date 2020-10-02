@@ -246,7 +246,10 @@ Item {
                     anchors.right: parent.right
                     anchors.verticalCenter: parent.verticalCenter
                     color: "#EEE" //Logic.cfgFontColor
-                    text : Qt.formatTime(dateTime, "hh:mm")
+                    //24 HOUR CLOCK
+                    //text : Qt.formatTime(dateTime, "hh:mm")
+                    //12 HOUR CLOCK
+                    text : Qt.formatTime(dateTime, "hh:mm a")
                     font.pointSize: 12 * Logic.cfgFontScale
                     font.family: Logic.cfgFontFamily
                 }
